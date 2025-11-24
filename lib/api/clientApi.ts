@@ -1,0 +1,23 @@
+import { nextServer } from "./api";
+
+export const getCars = async (params: {
+  brand?: string;
+  rentalPrice?: string;
+  minMileage?: string;
+  maxMileage?: string;
+  page?: string;
+  limit?: string;
+}) => {
+  const res = await nextServer.get("cars", { params });
+  return res.data;
+};
+
+export const getCarById = async (id: string) => {
+  const res = await fetch(`/api/cars/${id}`);
+  return res.json();
+};
+
+export const getBrands = async () => {
+  const res = await fetch("/api/brands");
+  return res.json();
+};

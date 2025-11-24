@@ -1,0 +1,75 @@
+.card {
+  width: 276px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.favBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carBrand,
+.carYear {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.carModel {
+  color: #3470ff;
+}
+
+.middleRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 20px;
+}
+
+.details {
+  font-family: var(--font-manrope);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #8d929a;
+}
+
+.readMoreBtn {
+  font-family: var(--font-manrope);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: white;
+
+  text-align: center;
+  background-color: #3470ff;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 12px;
+}
