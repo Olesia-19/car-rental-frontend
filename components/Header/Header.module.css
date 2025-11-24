@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 26px 120px;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navList {
+  display: flex;
+  gap: 32px;
+}
+
+.navLink {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #101828;
+}
+
+.navLink:hover {
+  color: #0b44cd;
+}
