@@ -3,16 +3,18 @@ import { Car } from "@/types/car";
 import css from "./CarCard.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useFavoritesStore } from "@/lib/store/favoritesStore";
 
 type CarCardProps = {
   car: Car;
+  isFavorite?: boolean;
+  onToggleFavorite?: (id: string) => void;
 };
 
-export default function CarCard({ car }: CarCardProps) {
-  const toggleFavorite = useFavoritesStore((state) => state.toggleFavorite);
-  const isFavorite = useFavoritesStore((state) => state.isFavorite(car.id));
-
+export default function CarCard({
+  car,
+  isFavorite,
+  onToggleFavorite,
+}: CarCardProps) {
   return (
     <div className={css.card}>
       <div className={css.imgWrapper}>
@@ -23,7 +25,10 @@ export default function CarCard({ car }: CarCardProps) {
           height={268}
           className={css.carImage}
         />
-        <button onClick={() => toggleFavorite(car.id)} className={css.favBtn}>
+        <button
+          onClick={() => onToggleFavorite?.(car.id)}
+          className={css.favBtn}
+        >
           <svg width="16" height="16">
             <use
               href={
