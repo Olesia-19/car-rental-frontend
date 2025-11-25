@@ -23,6 +23,6 @@ export const useFavoritesStore = create<FavoritesState>()(
 
       isFavorite: (id) => get().favorites.includes(id),
     }),
-    { name: "car-favorites" }
-  )
+    { name: "car-favorites" },
+  ),
 );
