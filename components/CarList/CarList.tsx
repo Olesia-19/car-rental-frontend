@@ -16,15 +16,18 @@ export default function CarList({
   toggleFavorite,
 }: CarListProps) {
   return (
-    <div className={css.carList}>
-      {cars.map((car) => (
-        <CarCard
-          key={car.id}
-          car={car}
-          isFavorite={favorites.includes(car.id)}
-          onToggleFavorite={toggleFavorite}
-        />
-      ))}
+    <div className={css.listWrapper}>
+      <div className={css.carList}>
+        {cars.map((car) => (
+          <div key={car.id} className={css.listItem}>
+            <CarCard
+              car={car}
+              isFavorite={favorites.includes(car.id)}
+              onToggleFavorite={toggleFavorite}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
