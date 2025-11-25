@@ -12,6 +12,7 @@ type CarsState = {
   appendCars: (cars: Car[]) => void;
   setPage: (page: number) => void;
   setLoading: (loading: boolean) => void;
+  resetCars: () => void;
 };
 
 export const useCarsStore = create<CarsState>((set, get) => ({
@@ -26,4 +27,5 @@ export const useCarsStore = create<CarsState>((set, get) => ({
   appendCars: (cars) => set({ cars: [...get().cars, ...cars] }),
   setPage: (page) => set({ page }),
   setLoading: (loading) => set({ isLoading: loading }),
+  resetCars: () => set({ cars: [], totalCars: 0, page: 1, totalPages: 0 }),
 }));

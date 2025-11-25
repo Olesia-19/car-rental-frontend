@@ -5,7 +5,7 @@ import { isAxiosError } from "axios";
 export async function GET(req: NextRequest) {
   try {
     const page = req.nextUrl.searchParams.get("page") ?? "1";
-    const limit = req.nextUrl.searchParams.get("limit") ?? "10";
+    const limit = req.nextUrl.searchParams.get("limit") ?? "12";
     const brand = req.nextUrl.searchParams.get("brand") ?? undefined;
     const rentalPrice =
       req.nextUrl.searchParams.get("rentalPrice") ?? undefined;
