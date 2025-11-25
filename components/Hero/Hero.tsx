@@ -9,11 +9,9 @@ export default function Hero() {
         <h2 className={css.text}>
           Reliable and budget-friendly rentals for any journey
         </h2>
-        <button className={css.btn}>
-          <Link href="/catalog" className={css.btnLink}>
-            View Catalog
-          </Link>
-        </button>
+        <Link href="/catalog" className={css.btn}>
+          View Catalog
+        </Link>
       </div>
     </section>
   );

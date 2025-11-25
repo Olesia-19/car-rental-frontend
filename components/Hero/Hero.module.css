@@ -55,13 +55,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.btnLink {
+  color: #fff;
   font-family: var(--font-manrope);
   font-weight: 600;
   font-size: 16px;
-  line-height: 125%;
-  color: #fff;
+  line-height: 1.25;
+  text-align: center;
   text-wrap: nowrap;
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0b44cd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
