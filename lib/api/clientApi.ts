@@ -13,8 +13,10 @@ export const getCars = async (params: {
 };
 
 // export const getCarById = async (id: string) => {
-//   const res = await fetch(`/api/cars/${id}`);
-//   return res.json();
+//   console.log("Fetching car with id:", id);
+//   const res = await fetch(`https://car-rental-api.goit.global/cars/${id}`);
+//   const data = await res.json();
+//   console.log(data);
 // };
 
 export const getBrands = async () => {

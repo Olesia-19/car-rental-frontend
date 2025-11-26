@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+.generalInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.generalInfo > :nth-child(1) {
+  margin-bottom: 8px;
+}
+
+.generalInfo > :nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.generalInfo > :nth-child(3) {
+  margin-bottom: 32px;
+}
+
+.carName,
+.price {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #101828;
+}
+
+.price {
+  color: #3470ff;
+}
+
+.addressMileage {
+  display: flex;
+  align-items: center;
+  gap: 16px; /*between address and mileage*/
+}
+
+.addressBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px; /*between svg and address*/
+}
+
+.addressMileage,
+.description {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+
+.detailsTitle {
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 20px;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listItem {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #101828;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}

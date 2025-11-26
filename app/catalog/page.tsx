@@ -87,17 +87,19 @@ export default function CatalogPage() {
 
   return (
     <div className={css.container}>
-      <CarFilters brands={brands} onSearch={handleSearch} />
-      <CarList
-        cars={cars}
-        favorites={favorites}
-        toggleFavorite={toggleFavorite}
-      />
-      {page < totalPages && (
-        <button onClick={handleLoadMore} className={css.LoadMoreBtn}>
-          Load More
-        </button>
-      )}
+      <div className={css.contentWrapper}>
+        <CarFilters brands={brands} onSearch={handleSearch} />
+        <CarList
+          cars={cars}
+          favorites={favorites}
+          toggleFavorite={toggleFavorite}
+        />
+        {page < totalPages && (
+          <button onClick={handleLoadMore} className={css.LoadMoreBtn}>
+            Load More
+          </button>
+        )}
+      </div>
     </div>
   );
 }
