@@ -1,0 +1,103 @@
+.filtersForm {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8d929a;
+  line-height: 1.33;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Общий стиль инпутов */
+.filterSelect,
+.filterInput {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  font-family: var(--font-manrope);
+  font-size: 16px;
+  color: #101828;
+  outline: none;
+  height: 44px;
+}
+
+/* mileage — объединенный блок */
+.mileageWrapper {
+  display: flex;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 44px;
+  background-color: #f7f7f7;
+}
+
+/* оба поля выглядят как одно */
+.inputLeft,
+.inputRight {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 12 24px;
+  font-size: 16px;
+  text-align: left;
+  background-color: #f7f7f7;
+}
+
+/* разделительная полоска */
+.separator {
+  width: 1px;
+  background-color: #dadde1;
+}
+
+/* Ховер на общем блоке */
+.mileageWrapper:focus-within {
+  box-shadow: 0 0 0 2px rgba(52, 112, 255, 0.15);
+}
+
+/* Лейбл бренда и цены */
+/* .filterSelect[multiple],
+.filterSelect option {
+  font-size: 14px;
+} */
+
+/* Высота scroll списков */
+.brandOptions {
+  max-height: 272px;
+  overflow-y: auto;
+}
+
+.priceOptions {
+  max-height: 188px;
+  overflow-y: aito;
+}
+
+.filterBtn {
+  padding: 12px 51px;
+  background-color: #3470ff;
+  color: white;
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  line-height: 1.25;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover,
+.filterBtn:focus {
+  background-color: #0b44cd;
+}

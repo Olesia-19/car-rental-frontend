@@ -17,7 +17,7 @@ export const getCars = async (params: {
 //   return res.json();
 // };
 
-// export const getBrands = async () => {
-//   const res = await fetch("/api/brands");
-//   return res.json();
-// };
+export const getBrands = async () => {
+  const res = await nextServer.get("/brands");
+  return res.data;
+};
