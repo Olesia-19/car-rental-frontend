@@ -26,6 +26,8 @@ export default async function CarDetailsPage({ params }: CarDetailsPageProps) {
           width={640}
           height={512}
           className={css.image}
+          // decoding="async"
+          loading="eager"
         />
         <CarBookingForm carId={car.id} />
       </div>

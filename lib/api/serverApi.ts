@@ -8,3 +8,8 @@ export const getCarById = async (id: string) => {
   );
   return res.data;
 };
+
+// export const getCarById = async (id: string): Promise<Car> => {
+//   const res = await nextServer.get<Car>(`/cars/${id}`);
+//   return res.data;
+// };
