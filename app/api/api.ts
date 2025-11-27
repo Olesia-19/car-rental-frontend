@@ -4,5 +4,5 @@ export type ApiError = AxiosError<{ error: string }>;
 
 export const api = axios.create({
   baseURL: `${process.env.HANDLER_API_URL}`,
-  withCredentials: true,
+  // withCredentials: true,
 });
