@@ -6,7 +6,9 @@ import { useFiltersStore } from "@/lib/store/filtersStore";
 import { useEffect, useState } from "react";
 import CarList from "@/components/CarList/CarList";
 import CarFilters from "@/components/CarFilters/CarFilters";
+
 import css from "./page.module.css";
+import Loader from "@/components/Loader/Loader";
 
 export default function CatalogPage() {
   const {
@@ -18,6 +20,7 @@ export default function CatalogPage() {
     setPage,
     totalPages,
     setLoading,
+    isLoading,
   } = useCarsStore();
   const { favorites, toggleFavorite } = useFavoritesStore();
   const { filters, setFilters, resetFilters } = useFiltersStore();
@@ -89,14 +92,24 @@ export default function CatalogPage() {
     <div className={css.container}>
       <div className={css.contentWrapper}>
         <CarFilters brands={brands} onSearch={handleSearch} />
-        <CarList
-          cars={cars}
-          favorites={favorites}
-          toggleFavorite={toggleFavorite}
-        />
+
+        {cars.length === 0 && isLoading ? (
+          <Loader />
+        ) : (
+          <CarList
+            cars={cars}
+            favorites={favorites}
+            toggleFavorite={toggleFavorite}
+          />
+        )}
+
         {page < totalPages && (
-          <button onClick={handleLoadMore} className={css.LoadMoreBtn}>
-            Load More
+          <button
+            onClick={handleLoadMore}
+            className={css.LoadMoreBtn}
+            disabled={isLoading}
+          >
+            {cars.length === 0 && isLoading ? "Loading..." : "Load More"}
           </button>
         )}
       </div>
