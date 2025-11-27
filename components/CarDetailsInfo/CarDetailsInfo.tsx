@@ -53,25 +53,25 @@ export default function CarDetailsInfo({ car }: CarDetailsInfoProps) {
               <svg width={16} height={16}>
                 <use href="/sprite.svg#icon-calendar"></use>
               </svg>
-              {car.year}
+              Year: {car.year}
             </li>
             <li className={css.listItem}>
               <svg width={16} height={16}>
                 <use href="/sprite.svg#icon-car-type"></use>
               </svg>
-              {car.type}
+              Type: {car.type}
             </li>
             <li className={css.listItem}>
               <svg width={16} height={16}>
                 <use href="/sprite.svg#icon-fuel"></use>
               </svg>
-              {car.fuelConsumption}
+              Fuel Consumption: {car.fuelConsumption}
             </li>
             <li className={css.listItem}>
               <svg width={16} height={16}>
                 <use href="/sprite.svg#icon-engine-size"></use>
               </svg>
-              {car.engineSize}
+              Engine Size: {car.engineSize}
             </li>
           </ul>
         </div>
