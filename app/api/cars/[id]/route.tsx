@@ -1,13 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { api } from "../../api";
+import { api } from "@/app/api/api";
 import { isAxiosError } from "axios";
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+interface Params {
+  params: {
+    id: string;
+  };
+}
+
+export async function GET(req: NextRequest, context: Params) {
   try {
-    const { id } = params;
+    const { id } = context.params;
 
     if (!id) {
       return NextResponse.json(
